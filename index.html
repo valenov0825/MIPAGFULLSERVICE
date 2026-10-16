@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FULLSERVICE</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>FULLSERVICE</h1>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- PORTADA -->
+        <section id="inicio" class="portada">
+            <div class="contenido-portada">
+                <h2>Todo lo que necesitas, en un solo lugar</h2>
+
+                <p>
+                    En FULLSERVICE conectamos tus necesidades con
+                    soluciones para tu hogar, negocio y vida diaria.
+                </p>
+
+                <a href="#servicios" class="boton">
+                    Conoce nuestros servicios
+                </a>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios" class="servicios">
+            <h2>Nuestros servicios</h2>
+
+            <p class="descripcion">
+                Encuentra el servicio que necesitas de manera fácil y rápida.
+            </p>
+
+            <div class="contenedor-servicios">
+
+                <article class="tarjeta">
+                    <h3>Plomería</h3>
+                    <p>Reparación de fugas, tuberías, llaves y baños.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Electricidad</h3>
+                    <p>Instalaciones eléctricas, iluminación y reparaciones.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Carpintería</h3>
+                    <p>Reparación de muebles, puertas y fabricación de repisas.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Chef a domicilio</h3>
+                    <p>Preparación de alimentos para comidas y ocasiones especiales.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Limpieza</h3>
+                    <p>Limpieza de casas, departamentos y oficinas.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Jardinería</h3>
+                    <p>Cuidado de plantas, jardines y áreas verdes.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Pintura</h3>
+                    <p>Pintura y renovación de paredes y espacios.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Reparaciones</h3>
+                    <p>Mantenimiento y reparación de electrodomésticos.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Cuidado de mascotas</h3>
+                    <p>Apoyo con paseos y cuidados básicos de tus mascotas.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="contacto">
+            <h2>Contáctanos</h2>
+
+            <p>
+                Cuéntanos qué servicio necesitas y nos pondremos
+                en contacto contigo.
+            </p>
+
+            <form id="formulario">
+                <label for="nombre">Nombre completo:</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Escribe tu nombre"
+                    required
+                >
+
+                <label for="correo">Correo electrónico:</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="ejemplo@correo.com"
+                    required
+                >
+
+                <label for="servicio">Servicio que necesitas:</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option>Plomería</option>
+                    <option>Electricidad</option>
+                    <option>Carpintería</option>
+                    <option>Chef a domicilio</option>
+                    <option>Limpieza</option>
+                    <option>Jardinería</option>
+                    <option>Pintura</option>
+                    <option>Reparaciones</option>
+                    <option>Cuidado de mascotas</option>
+                    <option>Otro</option>
+                </select>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="4"
+                    placeholder="Describe el servicio que necesitas"
+                    required
+                ></textarea>
+
+                <button type="submit" class="boton">
+                    Enviar solicitud
+                </button>
+
+                <p id="respuesta" aria-live="polite"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <h2>FULLSERVICE</h2>
+
+        <p>Soluciones para cada necesidad.</p>
+
+        <p>
+            Diseñado por Valeria Novaly Morales Villanueva
+        </p>
+
+        <p>&copy; 2026 FULLSERVICE. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const formulario = document.getElementById("formulario");
+        const respuesta = document.getElementById("respuesta");
+
+        formulario.addEventListener("submit", function(evento) {
+            evento.preventDefault();
+
+            respuesta.textContent =
+                "Formulario validado correctamente. " +
+                "Esta demostración todavía no envía solicitudes reales.";
+        });
+    </script>
+
+</body>
+</html>
+
